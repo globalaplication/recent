@@ -10,8 +10,11 @@ class recent(object):
         for test in self.source:
             search = '<div class="list_posts">'
             if test.find(search) is not -1:
+                if type(self.show) is not int:
+                    return "id bir sayi olmali!"
+                    exit()
                 if self.show < 1:
-                    print "Hatali id!"
+                    return "Hatali id!"
                     exit()
                 else:
                     id = id +1
